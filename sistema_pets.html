@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalhes do Projeto - Sistema de Gestão de Pets</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1><a href="index.html" style="color: var(--light-text-color);">Giovanna Karla</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html#sobre" class="nav-link">Sobre Mim</a></li>
+          <li><a href="index.html#projetos" class="nav-link">Meus Projetos</a></li>
+          <li><a href="habilidades.html" class="nav-link">Habilidades</a></li>
+          <li><a href="index.html#contato" class="nav-link">Conecte-se</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="sistema-pets-detalhes" class="section-padded animate-on-scroll">
+      <h2 class="section-title">Sistema de Gestão de Animais de Estimação: Cuidado Pet Descomplicado</h2>
+
+      <div class="project-detail-intro">
+        <p>Este projeto consiste em um sistema de gerenciamento de animais de estimação, desenvolvido em Python, que visa simplificar o registro e acompanhamento de informações essenciais de pets. É uma ferramenta robusta para organizar dados de animais e seus eventos importantes.</p>
+        <p class="project-note"><em>Este projeto é uma aplicação de console (terminal). A interação ocorre por comandos de texto.</em></p>
+      </div>
+
+      <div class="project-section">
+        <h3>O Que o Sistema Faz? (Funcionalidades Principais)</h3>
+        <p>O sistema "Vida Pet" é uma solução abrangente para a gestão de informações de animais. Suas funcionalidades incluem:</p>
+        <ul class="highlights-list">
+          <li><strong>Adicionar Animal:</strong> Cadastro completo de novos pets (nome, espécie, raça, data de nascimento, peso).</li>
+          <li><strong>Visualizar Animal:</strong> Consulta detalhada de informações de um pet específico.</li>
+          <li><strong>Editar Animal:</strong> Atualização de dados de pets já registrados.</li>
+          <li><strong>Excluir Animal:</strong> Remoção de pets do sistema.</li>
+          <li><strong>Registrar Evento:</strong> Gerenciamento de vacinações, consultas veterinárias e aplicações de remédios, associando-os a um animal específico.</li>
+          <li><strong>Definição e Acompanhamento de Metas:</strong> Permite definir metas de cuidado para cada pet e acompanhar seu status.</li>
+          <li><strong>Sugestões de Cuidados Personalizadas:</strong> Fornece recomendações de brinquedos, alimentação e exercícios baseadas na espécie e idade do pet.</li>
+          <li>**Navegação Integrada (Recurso Extra):** A opção 7 no menu principal do programa permite abrir o portfólio web.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h3>Minha Contribuição e Detalhes Técnicos</h3>
+        <p>Desenvolvi este projeto desde o início, focando na lógica de armazenamento e manipulação de dados em arquivos de texto. A principal arquitetura baseia-se em funções bem definidas para cada operação, garantindo modularidade e clareza no código.</p>
+        <p>Explorei o uso de manipulação de arquivos (leitura, escrita e reescrita) em Python, tratamento de exceções para inputs de usuário e a organização de dados em estruturas de texto simples para persistência.</p>
+      </div>
+
+      <div class="project-section">
+        <h3>Tecnologias Utilizadas</h3>
+        <ul class="tech-stack-list">
+          <li><strong>Python</strong>: Linguagem principal para toda a lógica do sistema.</li>
+          <li><strong>Manipulação de Arquivos (`.txt`)</strong>: Para armazenamento persistente de dados dos pets, eventos e metas.</li>
+          <li><strong>Estruturas de Dados Simples</strong>: Listas e dicionários para organizar temporariamente os dados.</li>
+          <li><strong>`os.system("cls")`</strong>: Para limpar a tela do terminal, melhorando a experiência do usuário.</li>
+          <li>**`webbrowser` e `os` (Python)**: Para a funcionalidade extra de abrir o portfólio web diretamente do programa.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h3>Desafios e Aprendizados</h3>
+        <p>Um dos desafios foi garantir a consistência dos dados ao editar ou excluir entradas nos arquivos de texto, o que exigiu um cuidado extra com a leitura e reescrita. Aprendi profundamente sobre a importância da organização do código em funções e a manipulação segura de arquivos para evitar perdas de dados.</p>
+        <p>Este projeto foi fundamental para solidificar meus conhecimentos em lógica de programação e manipulação de dados em Python, além de me dar uma visão prática sobre como criar aplicações funcionais de console.</p>
+      </div>
+
+      <div class="project-navigation">
+        <a href="index.html#projetos" class="cta-button project-button">← Voltar para Projetos</a>
+        <a href="https://github.com/GihNascimento/NomeDoRepositorioDoProjetoPets" target="_blank" class="cta-button project-button external-link">Ver Código no GitHub (Em breve)</a>
+        </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Giovanna Karla Santos do Nascimento. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

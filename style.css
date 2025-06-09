@@ -1,0 +1,924 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    /* Cores do Modo Claro (Padrão) */
+    --primary-color: #663399; /* Um roxo vibrante */
+    --secondary-color: #FFC0CB; /* Rosa claro para detalhes */
+    --accent-color: #87CEEB; /* Azul claro para destaques */
+    --text-color: #333;
+    --light-text-color: #f4f4f4;
+    --background-color: #f8f8f8;
+    --card-background: #ffffff;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+
+    /* Cores do Modo Escuro */
+    --dark-primary-color: #9370DB; /* Um roxo um pouco mais claro para contraste no escuro */
+    --dark-secondary-color: #DDA0DD; /* Um rosa mais visível no escuro */
+    --dark-accent-color: #4682B4; /* Um azul mais escuro, mas ainda vibrante */
+    --dark-text-color: #E0E0E0; /* Texto claro */
+    --dark-light-text-color: #A0A0A0; /* Texto auxiliar mais escuro */
+    --dark-background-color: #1A1A2E; /* Fundo bem escuro */
+    --dark-card-background: #16213E; /* Fundo de card escuro */
+}
+
+/* Transição suave para mudança de tema */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header, header nav ul li a, .hero-section, .cta-button, .projeto-card,
+.contact-link, footer, .skill-category, .skill-list li, .tech-stack-list li,
+.project-section, .numbered-list li::before, .team-list li, .team-photo,
+.theme-toggle-button { /* Adicionado o botão aqui para transição */
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita scroll horizontal indesejado */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+header h1 .subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+    color: var(--secondary-color);
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--light-text-color);
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    bottom: 0;
+    left: 0;
+    transition: width var(--transition-speed) ease-in-out;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--light-text-color);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #6aabc9; /* Um tom ligeiramente mais escuro do azul */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* General Section Styling */
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-padded {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* About Section */
+#sobre .about-content {
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+#sobre .about-content p {
+    margin-bottom: 20px;
+}
+
+/* Projects Section */
+#projetos {
+    background-color: var(--card-background);
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.projeto-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.projeto-card h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.project-tag {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+.projeto-card p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.project-tech-list strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.project-tech-list span {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #555;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    margin-right: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.project-highlights {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.project-highlights li {
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.project-highlights li::before {
+    content: '⭐'; /* Unicode star or any other icon */
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.project-button {
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+.project-button:hover {
+    background-color: #4a2a6b; /* Darker primary */
+    transform: translateY(-3px);
+}
+
+/* Contact Section */
+#contato {
+    text-align: center;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-list li {
+    margin: 0;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: var(--card-background);
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-speed) ease;
+}
+
+.contact-link:hover {
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-outro {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* --- Animações --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+/* Initial hidden state for JavaScript-triggered animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header Animations */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-in {
+    animation: slideIn 1s ease-out forwards;
+}
+
+.animate-bounce-in {
+    animation: bounceIn 1s ease-out forwards;
+}
+
+/* Typewriter effect for hero heading */
+.animate-typewriter {
+    overflow: hidden; /* Ensures the text is hidden until typed */
+    white-space: nowrap; /* Keeps the text on a single line */
+    margin: 0 auto;
+    letter-spacing: .05em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end),
+               blink-caret .75s step-end infinite;
+}
+
+/* The typing animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accent-color); }
+}
+
+/* Project Details Page Specific Styles */
+.project-detail-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 30px auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.video-container iframe,
+.video-container .full-project-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover; /* For GIF */
+}
+
+.project-section {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.project-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.project-section h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.project-image {
+    max-width: 80%; /* Ajuste o tamanho da imagem */
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: 30px auto; /* Centraliza a imagem e adiciona espaço */
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.02);
+}
+
+.project-image-full-width {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.tech-stack-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tech-stack-list li {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.tech-stack-list li:hover {
+    background-color: #6aabc9;
+    transform: translateY(-3px);
+}
+
+.project-navigation {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-navigation .project-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+}
+
+.project-navigation .external-link {
+    background-color: #333;
+    color: var(--light-text-color);
+}
+
+.project-navigation .external-link:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* For code snippets if you add them */
+pre {
+    background-color: #272822; /* Dracula theme or similar */
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9em;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Page Specific Styles */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.skill-category {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    background-color: var(--background-color);
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05rem;
+    font-weight: 500;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+.skill-list li:hover {
+    background-color: #e0e0e0;
+}
+
+.skill-level {
+    font-size: 0.9em;
+    color: #666;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.skills-outro {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.skills-outro .cta-button {
+    margin-top: 30px;
+}
+
+/* Delay for skill category animations */
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* General animation for elements on scroll */
+/* These are also defined for specific elements, but this is a fallback */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode header {
+    background-color: var(--dark-primary-color);
+}
+
+body.dark-mode header h1 .subtitle {
+    color: var(--dark-secondary-color);
+}
+
+body.dark-mode header nav ul li a {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode header nav ul li a::after {
+    background-color: var(--dark-accent-color);
+}
+
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, var(--dark-primary-color) 0%, var(--dark-secondary-color) 100%);
+}
+
+body.dark-mode .profile-pic {
+    border-color: var(--dark-accent-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .hero-text h2 {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .hero-text p {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .cta-button {
+    background-color: var(--dark-accent-color);
+    color: var(--dark-background-color); /* Texto escuro no botão claro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .cta-button:hover {
+    background-color: #366A9B; /* Um tom ligeiramente mais escuro do azul no dark mode */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .section-title {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .section-title::after {
+    background-color: var(--dark-accent-color);
+}
+
+body.dark-mode #projetos {
+    background-color: var(--dark-background-color); /* Mantém o fundo da seção de projetos escuro */
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .projeto-card {
+    background-color: var(--dark-card-background);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .projeto-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .projeto-card h3 {
+    color: var(--dark-primary-color);
+}
+
+body.dark-mode .project-tag {
+    background-color: var(--dark-secondary-color);
+    color: var(--dark-primary-color);
+}
+
+body.dark-mode .project-tech-list strong {
+    color: var(--dark-primary-color);
+}
+
+body.dark-mode .project-tech-list span {
+    background-color: #333;
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .project-highlights li::before {
+    color: var(--dark-accent-color);
+}
+
+body.dark-mode .project-button {
+    background-color: var(--dark-primary-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .project-button:hover {
+    background-color: #7B5BAE; /* Um tom mais escuro do roxo no dark mode */
+}
+
+body.dark-mode .contact-intro {
+    color: var(--dark-light-text-color);
+}
+
+body.dark-mode .contact-link {
+    color: var(--dark-text-color);
+    background-color: var(--dark-card-background);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .contact-link:hover {
+    background-color: var(--dark-accent-color);
+    color: var(--dark-background-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .contact-icon {
+    /* Se seus ícones forem escuros, você precisará de versões claras ou aplicar um filtro */
+    filter: invert(100%); /* Pode funcionar para ícones simples */
+}
+
+body.dark-mode .contact-outro {
+    color: var(--dark-light-text-color);
+}
+
+body.dark-mode footer {
+    background-color: var(--dark-primary-color);
+    color: var(--dark-text-color);
+}
+
+/* Specific styles for Project Details Page */
+body.dark-mode .project-section {
+    background-color: var(--dark-card-background);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .project-section:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .project-section h3 {
+    color: var(--dark-primary-color);
+    border-bottom-color: var(--dark-secondary-color);
+}
+
+body.dark-mode .project-image, .project-image-full-width {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .image-caption {
+    color: var(--dark-light-text-color);
+}
+
+body.dark-mode .numbered-list li::before {
+    background-color: var(--dark-accent-color);
+    color: var(--dark-background-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .team-list li {
+    background-color: var(--dark-background-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .team-list li:hover {
+    background-color: #333;
+}
+
+body.dark-mode .team-photo {
+    border-color: var(--dark-primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .team-photo:hover {
+    border-color: var(--dark-accent-color);
+}
+
+/* Typewriter effect color adjustment */
+body.dark-mode .animate-typewriter {
+    border-color: var(--dark-accent-color); /* Cursor color in dark mode */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .projeto-card h3 {
+        font-size: 1.6rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-tag {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .contact-list {
+        flex-direction: column;
+    }
+}

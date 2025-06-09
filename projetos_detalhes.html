@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalhes do Projeto - Gaita Hero</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1><a href="index.html" style="color: var(--light-text-color);">Giovanna Karla</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html#sobre" class="nav-link">Sobre Mim</a></li>
+          <li><a href="index.html#projetos" class="nav-link">Meus Projetos</a></li>
+          <li><a href="habilidades.html" class="nav-link">Habilidades</a></li>
+          <li><a href="index.html#contato" class="nav-link">Conecte-se</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="gaita-hero-detalhes" class="section-padded animate-on-scroll">
+      <h2 class="section-title">Gaita Hero: Música Inclusiva ao Alcance de Todos</h2>
+
+      <div class="project-detail-intro">
+        <p>O Gaita Hero é mais do que um jogo; é um projeto de impacto social que visa democratizar a experiência musical para pessoas com deficiência motora severa. Nossa missão foi criar uma interface divertida e acessível, onde a melodia é controlada por algo tão simples quanto o sopro.</p>
+        <p class="project-note"><em>O Gaita Hero reinterpreta a experiência dos jogos musicais, tornando-os acessíveis a todos.</em></p>
+      </div>
+
+      <div class="project-section">
+        <h3>O Problema: Por que o Gaita Hero?</h3>
+        <p>Identificamos um acesso limitado em jogos digitais, principalmente na indústria de jogos musicais, que frequentemente exigem boa agilidade e coordenação motora. A falta de acessibilidade nos controles tradicionais é uma barreira significativa. Apenas 30% dos jogos mais populares em 2022 ofereciam recursos mínimos de acessibilidade. Além disso, dispositivos especializados para acessibilidade muitas vezes são caros e complexos.</p>
+        <p>Interfaces de navegação não adaptadas dificultam ou impedem o uso por pessoas com mobilidade reduzida. Isso leva famílias e instituições a recorrerem a soluções customizadas que nem sempre são efetivas, resultando em exclusão social e digital e aumentando o isolamento. Barreiras digitais também dificultam o uso de jogos para reabilitação motora e cognitiva.</p>
+        <p class="image-caption">Controles convencionais não são adaptados para todos.</p>
+      </div>
+
+      <div class="project-section">
+        <h3>Quem é Impactado?</h3>
+        <p>Crianças, jovens, adultos e idosos que possuem algum tipo de deficiência motora são os principais impactados. Pessoas como Chuck Bittner, um jovem com quadriplegia e mobilidade reduzida nos membros superiores, representam o público que o Gaita Hero visa ajudar, já que os controles convencionais não são adaptados para suas condições.</p>
+        <p class="image-caption">Pessoas com mobilidade reduzida enfrentam desafios ao usar controles tradicionais.</p>
+      </div>
+
+      <div class="project-section">
+        <h3>A Solução: Gaita Hero</h3>
+        <p>Inspirados pelo famoso Guitar Hero, propomos uma alternativa acessível: a gaita! A gaita é um instrumento que pode ser adaptado para ser controlado por sopros e toques leves, tornando-o ideal para pessoas com limitações motoras.</p>
+        <p>Utilizamos a tecnologia Arduino por ser acessível e de baixo custo, o que permite uma fácil replicação em escala. O sistema possui uma interface intuitiva, adequada para diversos contextos, tornando-se uma solução adaptável e eficiente.</p>
+      </div>
+
+      <div class="project-section">
+        <h3>O Protótipo: Hardware e Software</h3>
+        <h4>Hardware:</h4>
+        <ul class="tech-stack-list">
+          <li>Estrutura de madeira com sensores de pressão e fluxo de ar (BMP180).</li>
+          <li>Arduino Uno para processamento de sinais.</li>
+          <li>Regulagem de altura com ferro ajustável.</li>
+        </ul>
+        <h4>Software:</h4>
+        <ul class="tech-stack-list">
+          <li>Python para converter sinais do Arduino e transmitir ao computador.</li>
+          <li>Jogo desenvolvido no Scratch com interface simples e sistema de pontuação baseado no timing da interação.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h3>Como Funciona?</h3>
+        <ol class="numbered-list">
+          <li>O jogo exibe notas musicais com diferentes cores que devem ser atingidas conforme o ritmo da música.</li>
+          <li>O usuário assopra a gaita nas cores indicadas.</li>
+          <li>O Arduino converte esses inputs em comandos digitais.</li>
+          <li>Conforme o usuário progride no jogo, pontos são somados.</li>
+          <li>Diferentes níveis de dificuldade ajustam a velocidade e complexidade das notas.</li>
+        </ol>
+      </div>
+
+      <div class="project-section">
+        <h3>Próximos Passos</h3>
+        <p>Para o futuro do Gaita Hero, planejamos:</p>
+        <ul class="highlights-list">
+          <li>**Testes com usuários reais:** Parcerias com instituições para validar a usabilidade.</li>
+          <li>**Melhorias técnicas:** Refinar a sensibilidade dos sensores para detectar movimentos mínimos.</li>
+          <li>**Expansão:** Ampliar a biblioteca de músicas e permitir customização.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h3>Nossa Equipe</h3>
+        <p>O Gaita Hero foi desenvolvido por uma equipe multidisciplinar dedicada, incluindo:</p>
+        <ul class="team-list">
+          <li>Artur Prazeres (Design)</li>
+          <li>Arthur Moury (Ciências da Computação)</li>
+          <li>Gabriel Nunes (Ciências da Computação)</li>
+          <li>Giovanna Almeida (Design)</li>
+          <li>Giovanna Nascimento (Ciências da Computação)</li>
+          <li>João Pedro Brayner (Design)</li>
+          <li>Felipe Braz (Ciências da Computação)</li>
+          <li>Guilherme Silvestre (Ciências da Computação)</li>
+          <li>Mariana Alves (Design)</li>
+          <li>Miguel Tojal (Ciências da Computação)</li>
+        </ul>
+      </div>
+
+      <div class="project-navigation">
+        <a href="index.html#projetos" class="cta-button project-button">← Voltar para Projetos</a>
+        <a href="https://github.com/GihNascimento/GaitaHero" target="_blank" class="cta-button project-button external-link">Ver Repositório no GitHub →</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Giovanna Karla Santos do Nascimento. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
